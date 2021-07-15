@@ -8,7 +8,7 @@ main {
   background-color: #242424;
   color: #d6ecf1;
   margin: 0;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +18,6 @@ main {
 
 .header {
   border-top: 6px solid #63b2c3;
-  position: fixed;
   height: 3rem;
   top: 0;
   display: flex;
@@ -73,7 +72,7 @@ main {
 
 .app-container {
   display: grid;
-  grid-template-columns: 250px 750px;
+  grid-template-columns: 25% 75%;
   gap: 1rem;
   margin: 0;
 }
@@ -98,7 +97,7 @@ main {
   display: flex;
   flex-direction: column;
   max-width: 250px;
-  margin-top: 2rem;
+  margin: 2rem auto;
 }
 
 .data-btn {
@@ -143,8 +142,15 @@ main {
   grid-template-columns: repeat(3, 1fr);
   cursor: default;
   text-align: left;
+  align-items: center;
   padding: 1rem;
-  border-radius: 10px;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.country-item img {
+  width: 30px;
+  height: 30px;
+  margin: 0;
 }
 
 .country-item .density {

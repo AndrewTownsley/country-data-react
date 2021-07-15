@@ -5,6 +5,20 @@ import DataBtns from "./components/DataBtns"
 import DataListMain from "./components/DataListMain"
 
 function App() {
+  const [countries, setCountries] = useState([]);
+
+  const fetchCountry = async () => {
+    const data = await fetch(`https://restcountries.eu/rest/v2/region/asia`)
+      .then(response => response.json());
+      
+      setCountries(data)
+  }
+  useEffect(() => {
+    fetchCountry();
+  }, []);
+  
+  console.log(countries);
+
   return (
     <main>
       <header className="header">
@@ -16,7 +30,7 @@ function App() {
       </header>
         <section className="app-container">
         <DataBtns/>
-        <DataListMain/>
+        <DataListMain countries={countries}/>
         </section>
     </main>
   );
