@@ -73,8 +73,6 @@ main {
 .app-container {
   display: grid;
   grid-template-columns: 25% 75%;
-  gap: 1rem;
-  margin: 0;
 }
 
 .region-btn {
@@ -129,6 +127,9 @@ main {
   flex-direction: column;
   background-color: #292929;
   padding: 2rem;
+  padding: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
   border-radius: 20px;
 }
 
@@ -150,7 +151,7 @@ main {
 .country-item img {
   width: 30px;
   height: 30px;
-  margin: 0;
+  margin-left: 10px;
 }
 
 .country-item .density {
