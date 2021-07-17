@@ -13,7 +13,7 @@ function App() {
       .then(result => {
         setCountries(result)
       })
-      .catch((err) => console.log("error"))
+      .catch((error) => console.log("error"))
     }
     
     useEffect(() => {
@@ -25,6 +25,17 @@ function App() {
      temp.sort((a, b) => {
       return a.population > b.population ? -1 : 1;
     })
+    setCountries(temp);
+  }
+
+  function sortDensity() {
+    let temp = [...countries]
+    temp.forEach((country) => {
+      country.density = parseInt((country.population / country.area).toFixed(0))
+    })
+    temp.sort((a, b) => {
+      return a.density > b.density ? -1 : 1;
+  })
     setCountries(temp);
   }
 
@@ -40,7 +51,7 @@ function App() {
       <section className="app-container">
       <div className="btn-container">
                 <button onClick={sortPopulation} className="data-btn">Sort by Population</button>
-                <button className="data-btn">Sort by Density</button>
+                <button onClick={sortDensity} className="data-btn">Sort by Density</button>
                 <button className="data-btn">20m Population</button>
                 <button className="data-btn">Show English Speaking</button>
                 <button className="data-btn">Reset</button>
@@ -48,7 +59,6 @@ function App() {
         <DataListMain 
           countries={countries} 
           setCountries={setCountries}
-          sortPopulation={sortPopulation}
         />
       </section>
     </main>
