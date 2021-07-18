@@ -1,8 +1,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { keepTheme } from './components/themes';
 // Components
-// import DataBtns from "./components/DataBtns"
 import DataListMain from "./components/DataListMain"
+import ToggleBtn from "./components/ToggleBtn";
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -111,14 +112,15 @@ function App() {
     fetchEurope();
   }
 
+  useEffect(() => {
+    keepTheme();
+  }, []);
+
   return (
     <main>
       <header className="header">
         <h1>Country Data</h1>
-        <div className="dark-toggle">
-          <button id="light" className="toggle-btn">Light</button>
-          <button id="dark" className="toggle-btn">Dark</button>
-        </div>
+          <ToggleBtn/>
         <div className="region-btn-container">
           <button onClick={fetchEurope} className="region-btn">Europe</button>
           <button onClick={fetchAfrica} className="region-btn">Africa</button>

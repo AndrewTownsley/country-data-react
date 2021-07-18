@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-/* .light-theme {
+.theme-light {
   --bg-primary: #d6ecf1;
   --bg-secondary: fff;
   --font-main: #1f2833;
@@ -14,9 +14,9 @@
   --bg-btn: #1f2833;
   --btn-hover: #0f1318;
   --item-hover: #b0d2da;
-} */
+}
 
-:root {
+.theme-dark {
   --bg-primary: #242424;
   --bg-second: #292929;
   --font-main: #d6ecf1;
@@ -78,7 +78,7 @@ main {
   background-color: #fff;
 }
 
-#light:hover {
+#dark:hover {
   background-color: #63b2c3;
   transition: ease 0.2s;
   /* box-shadow: 0px 6px 10px 5px rgba(99, 178, 195, 0.4);
@@ -86,9 +86,10 @@ main {
   -webkit-box-shadow: 0px 6px 10px 5px rgba(99, 178, 195, 0.4); */
 }
 
-#dark:hover {
+#light:hover {
   background-color: rgba(60, 70, 73, 0.4);
   transition: ease 0.2s;
+  color: var(--accent);
   /* box-shadow: 0px 6px 10px 5px rgba(119, 213, 235, 0.4);
   -moz-box-shadow: 0px 6px 10px 5px rgba(99, 178, 195, 0.4);
   -webkit-box-shadow: 0px 6px 10px 5px rgba(99, 178, 195, 0.4); */
