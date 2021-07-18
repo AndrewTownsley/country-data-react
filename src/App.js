@@ -8,7 +8,7 @@ function App() {
   const [countries, setCountries] = useState([]);
 
   const fetchCountry = () => {
-    fetch(`https://restcountries.eu/rest/v2/region/asia`)
+    fetch(`https://restcountries.eu/rest/v2`)
       .then(response => response.json())
       .then(result => {
         setCountries(result)
@@ -48,6 +48,17 @@ function App() {
     setCountries(temp);
   }
 
+  function filterEnglish() {
+    let temp = [...countries]
+    temp = temp.filter(country => country.languages[0].name == 'English')
+    setCountries(temp);
+    console.log(temp);
+  }
+
+  function resetCountryList() {
+    fetchCountry();
+  }
+
   return (
     <main>
       <header className="header">
@@ -62,8 +73,8 @@ function App() {
                 <button onClick={sortPopulation} className="data-btn">Sort by Population</button>
                 <button onClick={sortDensity} className="data-btn">Sort by Density</button>
                 <button onClick={filterMillions} className="data-btn">20m Population</button>
-                <button className="data-btn">Show English Speaking</button>
-                <button className="data-btn">Reset</button>
+                <button onClick={filterEnglish} className="data-btn">Show English Speaking</button>
+                <button onClick={resetCountryList} className="data-btn">Reset</button>
       </div>
         <DataListMain 
           countries={countries} 
