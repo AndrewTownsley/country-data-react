@@ -39,6 +39,15 @@ function App() {
     setCountries(temp);
   }
 
+  function filterMillions() {
+    let temp = [...countries]
+    temp = temp.filter((country) => {
+      return country.population >= 20000000;
+    })
+    console.log(temp);
+    setCountries(temp);
+  }
+
   return (
     <main>
       <header className="header">
@@ -52,7 +61,7 @@ function App() {
       <div className="btn-container">
                 <button onClick={sortPopulation} className="data-btn">Sort by Population</button>
                 <button onClick={sortDensity} className="data-btn">Sort by Density</button>
-                <button className="data-btn">20m Population</button>
+                <button onClick={filterMillions} className="data-btn">20m Population</button>
                 <button className="data-btn">Show English Speaking</button>
                 <button className="data-btn">Reset</button>
       </div>
