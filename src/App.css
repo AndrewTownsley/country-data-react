@@ -7,12 +7,12 @@
 .theme-light {
   --bg-primary: #d6ecf1;
   --bg-secondary: #fff;
-  --font-main: #1f2833;
+  --font-main: #3f5166;
   --font-btn: #fff;
   --accent: #63b2c3;
   --accent-border: rgb(245, 245, 245);
-  --bg-btn: #1f2833;
-  --btn-hover: #3f5166;
+  --bg-btn: #3f5166;
+  --btn-hover: #4f6885;
   --item-hover: #d6ecf1;
   --btnclr-hover: #fff;
 }
@@ -104,13 +104,13 @@ main {
 
 .region-btn-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .region-btn {
   margin-right: 10px;
   border: none;
-  padding: 10px;
+  padding: 5px;
   border-radius: 50px;
   font-size: 16px;
   color: var(--font-btn);
@@ -121,6 +121,10 @@ main {
 .region-btn:hover {
   background-color: var(--btn-hover);
   transition: ease 0.2s;
+}
+
+.region-btn:focus {
+  outline: 3px solid #63b2c3;
 }
 
 .btn-container {
