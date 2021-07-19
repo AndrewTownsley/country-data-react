@@ -121,12 +121,6 @@ function App() {
       <header className="header">
         <h1>Country Data</h1>
           <ToggleBtn/>
-        <div className="region-btn-container">
-          <button onClick={fetchEurope} className="region-btn">Europe</button>
-          <button onClick={fetchAfrica} className="region-btn">Africa</button>
-          <button onClick={fetchAmericas} className="region-btn">Americas</button>
-          <button onClick={fetchAsia} className="region-btn">Asia</button>
-        </div>
       </header>
       <section className="app-container">
       <div className="btn-container">
@@ -135,7 +129,9 @@ function App() {
                 <button onClick={filterMillions} className="data-btn">20m Population</button>
                 <button onClick={filterEnglish} className="data-btn">Show English Speaking</button>
                 <button onClick={resetCountryList} className="data-btn">Reset</button>
+        
       </div>
+      
         <DataListMain 
           countries={countries} 
           setCountries={setCountries}

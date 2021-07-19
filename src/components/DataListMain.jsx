@@ -7,6 +7,12 @@ const DataListMain = ({countries, setCountries, sortPopulation}) => {
     return (
       
         <section className="country-list-container">
+             <div className="region-btn-container">
+              <button  className="region-btn">Europe</button>
+              <button  className="region-btn">Africa</button>
+              <button  className="region-btn">Americas</button>
+              <button  className="region-btn">Asia</button>
+          </div>
             <header className="country-list-header">
                 <h2>Country</h2>
                 <h2>Population</h2>
