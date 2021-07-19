@@ -6,19 +6,20 @@
 
 .theme-light {
   --bg-primary: #d6ecf1;
-  --bg-secondary: fff;
+  --bg-secondary: #fff;
   --font-main: #1f2833;
   --font-btn: #fff;
-  --accent: #1f2833;
+  --accent: #63b2c3;
   --accent-border: rgb(245, 245, 245);
   --bg-btn: #1f2833;
-  --btn-hover: #0f1318;
-  --item-hover: #b0d2da;
+  --btn-hover: #3f5166;
+  --item-hover: #d6ecf1;
+  --btnclr-hover: #fff;
 }
 
 .theme-dark {
   --bg-primary: #242424;
-  --bg-second: #292929;
+  --bg-secondary: #292929;
   --font-main: #d6ecf1;
   --font-btn: #fff;
   --accent: #63b2c3;
@@ -81,15 +82,16 @@ main {
 #dark:hover {
   background-color: #63b2c3;
   transition: ease 0.2s;
+  /* color: var(--btnclr-hover); */
   /* box-shadow: 0px 6px 10px 5px rgba(99, 178, 195, 0.4);
   -moz-box-shadow: 0px 6px 10px 5px rgba(99, 178, 195, 0.4);
   -webkit-box-shadow: 0px 6px 10px 5px rgba(99, 178, 195, 0.4); */
 }
 
 #light:hover {
-  background-color: rgba(60, 70, 73, 0.4);
+  background-color: #0f1318;
   transition: ease 0.2s;
-  color: var(--accent);
+  color: var(--btnclr-hover);
   /* box-shadow: 0px 6px 10px 5px rgba(119, 213, 235, 0.4);
   -moz-box-shadow: 0px 6px 10px 5px rgba(99, 178, 195, 0.4);
   -webkit-box-shadow: 0px 6px 10px 5px rgba(99, 178, 195, 0.4); */
@@ -150,7 +152,7 @@ main {
 .country-list-container {
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-second);
+  background-color: var(--bg-secondary);
   padding: 2rem;
   padding: 2rem;
   margin-right: 2rem;
