@@ -1,9 +1,10 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { keepTheme } from './components/themes';
-// Components
 import DataListMain from "./components/DataListMain"
 import ToggleBtn from "./components/ToggleBtn";
+import DataBtns from './components/DataBtns';
+import RegionBtns from "./components/RegionBtns";
+import { keepTheme } from './components/themes';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -21,45 +22,6 @@ function App() {
       fetchCountry();
   }, []);
 
-  function sortPopulation() {
-    let temp = [...countries]
-     temp.sort((a, b) => {
-      return a.population > b.population ? -1 : 1;
-    })
-    setCountries(temp);
-  }
-
-  function sortDensity() {
-    let temp = [...countries]
-    temp.forEach((country) => {
-      country.density = parseInt((country.population / country.area).toFixed(0))
-    })
-    temp.sort((a, b) => {
-      return a.density > b.density ? -1 : 1;
-  })
-    setCountries(temp);
-  }
-
-  function filterMillions() {
-    let temp = [...countries]
-    temp = temp.filter((country) => {
-      return country.population >= 20000000;
-    })
-    console.log(temp);
-    setCountries(temp);
-  }
-
-  function filterEnglish() {
-    let temp = [...countries]
-    temp = temp.filter(country => country.languages[0].name == 'English')
-    setCountries(temp);
-    console.log(temp);
-  }
-
-  function resetCountryList() {
-    fetchCountry();
-  }
-
   useEffect(() => {
     keepTheme();
   }, []);
@@ -68,18 +30,16 @@ function App() {
     <main>
       <header className="header">
         <h1>Country Data</h1>
-          <ToggleBtn fetchCountry={fetchCountry}/>
+        <ToggleBtn fetchCountry={fetchCountry}/>
       </header>
+      <RegionBtns
+         setCountries={setCountries} 
+         />
       <section className="app-container">
-      <div className="btn-container">
-                <button onClick={sortPopulation} className="data-btn">Sort by Population</button>
-                <button onClick={sortDensity} className="data-btn">Sort by Density</button>
-                <button onClick={filterMillions} className="data-btn">20m Population</button>
-                <button onClick={filterEnglish} className="data-btn">Show English Speaking</button>
-                <button onClick={resetCountryList} className="data-btn">Reset</button>
-        
-      </div>
-      
+        <DataBtns 
+          countries={countries} 
+          setCountries={setCountries} 
+          fetchCountry={fetchCountry}/>
         <DataListMain 
           countries={countries} 
           setCountries={setCountries}

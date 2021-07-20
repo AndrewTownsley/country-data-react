@@ -13,6 +13,7 @@
   --accent-border: rgb(245, 245, 245);
   --bg-btn: #3f5166;
   --btn-hover: #4f6885;
+  --bg-item: #f7fdff;
   --item-hover: #d6ecf1;
   --btnclr-hover: #fff;
 }
@@ -104,17 +105,18 @@ main {
 
 .region-btn-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: left;
+  width: 50%;
 }
 
 .region-btn {
   margin-right: 10px;
   border: none;
-  padding: 5px;
+  padding: 8px;
   border-radius: 50px;
   font-size: 16px;
   color: var(--font-btn);
-  background-color: var(--accent);
+  background-color: var(--bg-btn);
   cursor: pointer;
 }
 
@@ -164,7 +166,7 @@ main {
   background-color: var(--bg-secondary);
   padding: 1rem 2rem 2rem 2rem;
   margin-right: 2rem;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   border-radius: 20px;
 }
 
@@ -175,12 +177,13 @@ main {
 }
 
 .country-item {
+  background-color: var(--bg-item);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   cursor: default;
   text-align: left;
   align-items: center;
-  padding: 1rem;
+  padding: 0.6rem 1rem;
   border-bottom: 1px solid var(--bg-primary);
 }
 
