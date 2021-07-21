@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import RegionBtns from './RegionBtns';
 import ListHeader from './ListHeader';
 
 const DataListMain = ({countries, setCountries }) => {
@@ -39,12 +38,3 @@ const DataListMain = ({countries, setCountries }) => {
 }
 
 export default DataListMain;
-
-
-
-
-//==========================================================
-//==========================================================
-//==========================================================
-
-
