@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+td {
+  display: inline-block;
+}
+
+tr {
+  display: inline-block;
+}
+
 .theme-light {
   --bg-primary: #d6ecf1;
   --bg-secondary: #fff;
@@ -153,7 +161,7 @@ main {
   transition: ease 0.2s;
 }
 
-.country-list-header {
+.country-list-header tr {
   display: flex;
   justify-content: space-between;
   border-bottom: 3px solid var(--accent);
@@ -177,14 +185,20 @@ main {
 }
 
 .country-item {
+  display: flex;
   background-color: var(--bg-item);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   cursor: default;
-  text-align: left;
+  text-align: center;
+  /* justify-content: center; */
   align-items: center;
   padding: 0.6rem 1rem;
   border-bottom: 1px solid var(--bg-primary);
+}
+
+.name {
+  text-align: left;
 }
 
 .country-item img {
