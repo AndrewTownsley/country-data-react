@@ -9,11 +9,11 @@ const DataListMain = ({countries, setCountries }) => {
           .then(result => {
             setCountries(result)
           })
-          .catch((error) => console.log("error"))
         }
         
         useEffect(() => {
-          fetchCountry();
+          fetchCountry()
+          // eslint-disable-next-line
       }, []);
 
     return (
@@ -21,6 +21,7 @@ const DataListMain = ({countries, setCountries }) => {
         <section className="country-list-container"> 
             <ListHeader/>
             <table className="country-list">
+              <tbody>
               {countries.map((country, index) => {
          return <tr className="country-item" key={index}>
                   <td className="name">{country.name}
@@ -31,6 +32,7 @@ const DataListMain = ({countries, setCountries }) => {
                   (country.population / country.area).toFixed(0)} people/sq km</td>
                 </tr>
 })}
+</tbody>
 </table>
         </section>
 

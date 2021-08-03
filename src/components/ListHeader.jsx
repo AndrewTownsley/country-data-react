@@ -2,6 +2,7 @@
 function ListHeader() {
 
     return (
+        <table>
         <thead className="country-list-header">
             <tr>
                 <th><h2>Country</h2></th>
@@ -9,6 +10,7 @@ function ListHeader() {
                 <th><h2>Density</h2></th>
             </tr>
          </thead>
+         </table>
     )
 }
 

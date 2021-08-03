@@ -30,7 +30,7 @@ function DataBtns({ countries, setCountries, fetchCountry}) {
     
       function filterEnglish() {
         let temp = [...countries]
-        temp = temp.filter(country => country.languages[0].name == 'English')
+        temp = temp.filter(country => country.languages[0].name === 'English')
         setCountries(temp);
         console.log(temp);
       }

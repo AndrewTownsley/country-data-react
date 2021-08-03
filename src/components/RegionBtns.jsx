@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 
 
-function RegionBtns({ setCountries }) {
+function RegionBtns({ setCountries}) {
 
-    
     const fetchCountry = () => {
         fetch(`https://restcountries.eu/rest/v2`)
           .then(response => response.json())
@@ -15,6 +14,7 @@ function RegionBtns({ setCountries }) {
         
         useEffect(() => {
           fetchCountry();
+          // eslint-disable-next-line
       }, []);
 
     const fetchEurope = () => {
@@ -23,11 +23,11 @@ function RegionBtns({ setCountries }) {
           .then(result => {
             setCountries(result)
           })
-          .catch((error) => console.log("error"))
         }
         
         useEffect(() => {
           fetchCountry();
+          // eslint-disable-next-line
       }, []);
     
       const fetchAfrica = () => {
@@ -36,11 +36,11 @@ function RegionBtns({ setCountries }) {
           .then(result => {
             setCountries(result)
           })
-          .catch((error) => console.log("error"))
         }
         
         useEffect(() => {
           fetchCountry();
+          // eslint-disable-next-line
       }, []);
     
       const fetchAmericas = () => {
@@ -49,11 +49,11 @@ function RegionBtns({ setCountries }) {
           .then(result => {
             setCountries(result)
           })
-          .catch((error) => console.log("error"))
         }
         
         useEffect(() => {
           fetchCountry();
+          // eslint-disable-next-line
       }, []);
     
       const fetchAsia = () => {
@@ -62,12 +62,13 @@ function RegionBtns({ setCountries }) {
           .then(result => {
             setCountries(result)
           })
-          .catch((error) => console.log("error"))
         }
         
         useEffect(() => {
           fetchCountry();
+          // eslint-disable-next-line
       }, []);
+
 
     return (
         <div className="region-btn-container">

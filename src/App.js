@@ -29,11 +29,12 @@ function App() {
   return (
     <main>
       <header className="header">
-        <h1>Country Data</h1>
+        <h1>CountryData.com</h1>
         <ToggleBtn fetchCountry={fetchCountry}/>
       </header>
       <RegionBtns
          setCountries={setCountries} 
+         fetchCountry={fetchCountry}
          />
       <section className="app-container">
         <DataBtns 
