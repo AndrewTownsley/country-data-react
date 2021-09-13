@@ -1,9 +1,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import DataListMain from "./components/DataListMain"
-import ToggleBtn from "./components/ToggleBtn";
-import DataBtns from './components/DataBtns';
-import RegionBtns from "./components/RegionBtns";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ToggleBtn from './components/ToggleBtn'
+import Main from './pages/Main';
+import Detail from './pages/Detail';
 import { keepTheme } from './components/themes';
 
 function App() {
@@ -27,27 +27,28 @@ function App() {
   }, []);
 
   return (
-    <main>
-      <header className="header">
-        <h1>CountryData.com</h1>
-        <ToggleBtn fetchCountry={fetchCountry}/>
-      </header>
-      <RegionBtns
-         setCountries={setCountries} 
-         fetchCountry={fetchCountry}
-         />
-      <section className="app-container">
-        <DataBtns 
-          countries={countries} 
-          setCountries={setCountries} 
-          fetchCountry={fetchCountry}/>
-        <DataListMain 
-          countries={countries} 
-          setCountries={setCountries}
-        />
-      </section>
-    </main>
+    <Router>
+      <main>
+        <header className="header">
+          <h1>CountryData.com</h1>
+          <ToggleBtn/>
+        </header>
+        <Switch>
+          <Route exact path="/">
+            <Main
+              countries={countries}
+              setCountries={setCountries}
+              fetchCountry={fetchCountry}  
+            />
+          </Route>
+          <Route path="/detail" component={Detail}/>
+        </Switch>
+      </main>
+    </Router>
   );
 }
 
 export default App;
+
+
+
