@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import ListHeader from './ListHeader';
+import CountryItem from './CountryItem';
 
 const DataListMain = ({countries, setCountries }) => {
 
@@ -23,15 +23,12 @@ const DataListMain = ({countries, setCountries }) => {
             <ListHeader/>
             <section className="country-list">
              {countries.map((country, index) => {
-                 return <Link to="/detail"><li className="country-item" key={index}>
-                                <span>{country.name}
-                                    <img src={country.flag} alt={country.flag} />
-                                </span>
-                                <span> {country.population.toLocaleString('en-US')}</span>
-                                <span className="density"> {country.area == null ? "N/A" :
-                                (country.population / country.area).toFixed(0)} people/sq km</span>
-                              </li>
-                        </Link>
+                 return <CountryItem
+                          key={country.numericCode}
+                          countries={countries}
+                          country={country}
+                          index={index}
+                        />
                           })}
             </section>
         </section>

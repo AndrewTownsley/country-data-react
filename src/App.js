@@ -41,7 +41,11 @@ function App() {
               fetchCountry={fetchCountry}  
             />
           </Route>
-          <Route path="/detail" component={Detail}/>
+          <Route path="/detail">
+              <Detail
+                countries={countries}  
+              />
+          </Route>
         </Switch>
       </main>
     </Router>
