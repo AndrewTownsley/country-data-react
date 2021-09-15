@@ -17,7 +17,11 @@
 
 8.  Add Search == search by Country.
 
-9.  Back Button on the Individual Counry Page.
+9.  Back Button on the Individual Country Page.
+
+10. Deal with error handling.
+
+11. refactor fetch to async await.s
 
 **_ CSS _**
 **_ CSS _**

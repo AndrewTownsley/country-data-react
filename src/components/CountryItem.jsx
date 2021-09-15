@@ -6,7 +6,7 @@ const CountryItem = ({ country, index }) => {
 
 
     return (
-            <Link to={`/detail/${name}`}>
+            <Link to={`/detail/${country.name}`}>
                 <li className="country-item" key={index}>
                     <span>{country.name}
                         <img src={country.flag} alt={country.flag} />

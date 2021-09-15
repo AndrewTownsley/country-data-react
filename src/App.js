@@ -17,6 +17,8 @@ function App() {
       })
       .catch((error) => console.log("error"))
     }
+
+
     
     useEffect(() => {
       fetchCountry();
@@ -41,7 +43,7 @@ function App() {
               fetchCountry={fetchCountry}  
             />
           </Route>
-          <Route path="/detail">
+          <Route path="/detail/:name">
               <Detail
                 countries={countries}  
               />
