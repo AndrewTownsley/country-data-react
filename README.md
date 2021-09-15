@@ -11,9 +11,10 @@
 <!-- 6.  Display countries by Region ( Africa, Americas, Asia, Europe, Oceania ). -->
 
 7.  Route to new page with more detailed country info .
-    a. Create Country Page Component.
-    b. Implement Route/Switch to navigate to the country component.
-    c. Back Button to return to Home Page
+    <!-- a. Create Country Page Component. -->
+    <!-- b. Implement Route/Switch to navigate to the country component. -->
+
+    c. Back Button to return to Home Page****\*\*****
 
 8.  Add Search == search by Country.
 
