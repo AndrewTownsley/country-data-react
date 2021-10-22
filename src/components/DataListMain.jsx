@@ -21,17 +21,17 @@ const DataListMain = ({countries, setCountries }) => {
     return (
       
         <section className="country-list-container"> 
-            <ListHeader/>
-            <section className="country-list">
-             {countries.map((country, index) => {
-                 return <CountryItem
-                          key={country.numericCode}
-                          countries={countries}
-                          country={country}
-                          index={index}
-                        />
-                          })}
-            </section>
+                <ListHeader/>
+                <section className="country-list">
+                    {countries.map((country, index) => {
+                      return <CountryItem
+                      key={country.numericCode}
+                      countries={countries}
+                      country={country}
+                      index={index}
+               />
+              })}
+                </section>
         </section>
 
     )

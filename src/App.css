@@ -40,7 +40,7 @@ a {
   color: var(--font-main);
 }
 
-main {
+.main {
   background-color: var(--bg-primary);
   color: var(--font-main);
   margin: 0;

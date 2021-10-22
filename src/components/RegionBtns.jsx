@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 function RegionBtns({ setCountries}) {
 
     const fetchCountry = () => {
-        fetch(`https://restcountries.eu/rest/v2`)
+        fetch(`https://restcountries.com/v2/all`)
           .then(response => response.json())
           .then(result => {
             setCountries(result)

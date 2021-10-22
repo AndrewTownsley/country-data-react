@@ -50,20 +50,20 @@ function App() {
           <h1>CountryData.com</h1>
           <ToggleBtn/>
         </header>
-        <Switch>
-          <Route exact path="/">
+        {/* <Switch> */}
+          {/* <Route exact path="/"> */}
             <Main
               countries={countries}
               setCountries={setCountries}
               fetchCountry={fetchCountry}  
             />
-          </Route>
+          {/* </Route> */}
           {/* <Route path="/detail/:name">
               <Detail
                 countries={countries}  
               />
           </Route> */}
-        </Switch>
+        {/* </Switch> */}
       </main>
     </Router>
   );
