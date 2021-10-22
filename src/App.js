@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ToggleBtn from './components/ToggleBtn'
 import Main from './pages/Main';
-// import Detail from './pages/Detail';
+import Detail from './pages/Detail';
 import { keepTheme } from './components/themes';
 
 function App() {
@@ -50,20 +50,20 @@ function App() {
           <h1>CountryData.com</h1>
           <ToggleBtn/>
         </header>
-        {/* <Switch> */}
-          {/* <Route exact path="/"> */}
+        <Switch>
+          <Route exact path="/">
             <Main
               countries={countries}
               setCountries={setCountries}
               fetchCountry={fetchCountry}  
             />
-          {/* </Route> */}
-          {/* <Route path="/detail/:name">
+          </Route> 
+          <Route path="/detail/:name">
               <Detail
                 countries={countries}  
               />
-          </Route> */}
-        {/* </Switch> */}
+          </Route> 
+         </Switch> 
       </main>
     </Router>
   );

@@ -44,7 +44,7 @@ a {
   background-color: var(--bg-primary);
   color: var(--font-main);
   margin: 0;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,6 +53,8 @@ a {
 }
 
 .header {
+  background-color: var(--bg-primary);
+  color: var(--font-main);
   border-top: 6px solid var(--accent);
   height: 3rem;
   /* position: fixed; */
