@@ -9,16 +9,17 @@ const Main = ({countries, setCountries, fetchCountry}) => {
     return (
         <section className="app-container">
             <RegionBtns
-            setCountries={setCountries} 
-            fetchCountry={fetchCountry}
-            />
+                setCountries={setCountries} 
+                fetchCountry={fetchCountry}
+            /> 
             <DataBtns 
-            countries={countries} 
-            setCountries={setCountries} 
-            fetchCountry={fetchCountry}/>
+                countries={countries} 
+                setCountries={setCountries} 
+                fetchCountry={fetchCountry}
+            />
             <DataListMain 
-            countries={countries} 
-            setCountries={setCountries}
+                countries={countries} 
+                setCountries={setCountries}
             />
         </section>
     )

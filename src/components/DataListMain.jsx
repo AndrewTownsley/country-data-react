@@ -5,10 +5,11 @@ import CountryItem from './CountryItem';
 const DataListMain = ({countries, setCountries }) => {
 
     const fetchCountry = () => {
-        fetch(`https://restcountries.eu/rest/v2`)
+        fetch(`https://restcountries.com/v2/all`)
           .then(response => response.json())
           .then(result => {
             setCountries(result)
+            console.log(result);
           })
         }
         
