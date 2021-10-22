@@ -24,7 +24,6 @@ function DataBtns({ countries, setCountries, fetchCountry}) {
         temp = temp.filter((country) => {
           return country.population >= 20000000;
         })
-        console.log(temp);
         setCountries(temp);
       }
     
@@ -32,11 +31,11 @@ function DataBtns({ countries, setCountries, fetchCountry}) {
         let temp = [...countries]
         temp = temp.filter(country => country.languages[0].name === 'English')
         setCountries(temp);
-        console.log(temp);
       }
     
       function resetCountryList() {
         fetchCountry();
+        console.log('Reset Countries');
       }
       
       return (

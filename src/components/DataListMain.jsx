@@ -9,14 +9,13 @@ const DataListMain = ({countries, setCountries }) => {
           .then(response => response.json())
           .then(result => {
             setCountries(result)
-            console.log(result);
           })
         }
         
-        useEffect(() => {
-          fetchCountry()
-          // eslint-disable-next-line
-      }, []);
+      //   useEffect(() => {
+      //     fetchCountry()
+      //     // eslint-disable-next-line
+      // }, []);
 
     return (
       

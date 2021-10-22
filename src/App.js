@@ -8,14 +8,13 @@ import { keepTheme } from './components/themes';
 
 function App() {
   const [countries, setCountries] = useState([]);
+  const [fetchRegion, setFetchRegion] = useState('all');
 
   const fetchCountry = () => {
-    fetch(`https://restcountries.com/v2/all`)
+    fetch(`https://restcountries.com/v2/${fetchRegion}`)
     .then(response => response.json())
     .then(result => {
         setCountries(result)
-      console.log(result);
-        console.log('hello is this thing on??');
       })
       .catch((error) => console.log(error))
     }
@@ -27,7 +26,7 @@ function App() {
       //       setCountries(data)
       //       console.log(data);
       //     } catch (error) {
-            
+      //       console.log(error);
       //     }
       //   }
 
@@ -53,6 +52,8 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Main
+              fetchRegion={fetchRegion}
+              setFetchRegion={setFetchRegion}
               countries={countries}
               setCountries={setCountries}
               fetchCountry={fetchCountry}  
