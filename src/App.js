@@ -52,6 +52,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Main
+            
               fetchRegion={fetchRegion}
               setFetchRegion={setFetchRegion}
               countries={countries}
