@@ -3,19 +3,19 @@ import ListHeader from './ListHeader';
 
 const DataListMain = ({countries, setCountries }) => {
 
-    const fetchCountry = () => {
-      console.log("Data List Main");
-        fetch(`https://restcountries.eu/rest/v2/all`)
-          .then(response => response.json())
-          .then(result => {
-            setCountries(result)
-          })
-        }
+    // const fetchCountry = () => {
+    //   console.log("Data List Main");
+    //     fetch(`https://restcountries.com/v2/all`)
+    //       .then(response => response.json())
+    //       .then(result => {
+    //         setCountries(result)
+    //       })
+    //     }
         
-        useEffect(() => {
-          fetchCountry()
-          // eslint-disable-next-line
-      }, []);
+    //     useEffect(() => {
+    //       fetchCountry()
+    //       // eslint-disable-next-line
+    //   }, []);
 
     return (
       

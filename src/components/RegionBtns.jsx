@@ -5,7 +5,7 @@ function RegionBtns({ setCountries}) {
 
     const fetchCountry = () => {
       console.log("Region Button Fetch");
-        fetch(`https://restcountries.eu/rest/v2`)
+        fetch(`https://restcountries.com/v2/all`)
           .then(response => response.json())
           .then(result => {
             setCountries(result)
@@ -19,7 +19,9 @@ function RegionBtns({ setCountries}) {
       }, []);
 
     const fetchEurope = () => {
-        fetch(`https://restcountries.eu/rest/v2/region/europe`)
+      console.log("Europe Europe");
+        fetch(`https://restcountries.com/v2/continent/europe
+        `)
           .then(response => response.json())
           .then(result => {
             setCountries(result)
@@ -32,7 +34,9 @@ function RegionBtns({ setCountries}) {
       }, []);
     
       const fetchAfrica = () => {
-        fetch(`https://restcountries.eu/rest/v2/region/africa`)
+        console.log("Africa Africa");
+        fetch(`https://restcountries.com/v2/continent/africa
+        `)
           .then(response => response.json())
           .then(result => {
             setCountries(result)
@@ -45,7 +49,9 @@ function RegionBtns({ setCountries}) {
       }, []);
     
       const fetchAmericas = () => {
-        fetch(`https://restcountries.eu/rest/v2/region/Americas`)
+        console.log("America America");
+        fetch(`https://restcountries.com/v2/continent/americas
+        `)
           .then(response => response.json())
           .then(result => {
             setCountries(result)
@@ -58,7 +64,9 @@ function RegionBtns({ setCountries}) {
       }, []);
     
       const fetchAsia = () => {
-        fetch(`https://restcountries.eu/rest/v2/region/Asia`)
+        console.log("Asia Asia");
+        fetch(`https://restcountries.com/v2/continent/asia
+        `)
           .then(response => response.json())
           .then(result => {
             setCountries(result)

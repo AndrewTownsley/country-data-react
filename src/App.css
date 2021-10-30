@@ -59,7 +59,7 @@ main {
 }
 
 .header h1 {
-  margin-left: 2rem;
+  margin-left: 0.5rem;
   font-size: 1.6rem;
 }
 
@@ -132,7 +132,7 @@ main {
   display: flex;
   flex-direction: column;
   max-width: 250px;
-  margin: 2rem auto;
+  margin: 2rem 0.5rem;
 }
 
 .data-btn {
@@ -164,7 +164,7 @@ main {
   flex-direction: column;
   background-color: var(--bg-secondary);
   padding: 1rem 2rem 2rem 2rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
   margin-top: 0.5rem;
   border-radius: 20px;
   min-height: 80vh;

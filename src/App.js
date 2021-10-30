@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react';
 import DataListMain from "./components/DataListMain"
 import ToggleBtn from "./components/ToggleBtn";
 import DataBtns from './components/DataBtns';
-import RegionBtns from "./components/RegionBtns";
+import RegionBtnTest from "./components/RegionBtnTest";
 import { keepTheme } from './components/themes';
 
 function App() {
   const [countries, setCountries] = useState([]);
+  const [fetchRegion, setFetchRegion] = useState('');
 
   const fetchCountry = () => {
     console.log("App FetchCountry");
@@ -19,6 +20,7 @@ function App() {
       })
       .catch((error) => console.log(error))
     }
+
     
     useEffect(() => {
     fetchCountry();
@@ -31,7 +33,8 @@ function App() {
         <h1>CountryData.com</h1>
         <ToggleBtn fetchCountry={fetchCountry}/>
       </header>
-      {/* <RegionBtns
+      {/* <RegionBtnTest
+         countries={countries}
          setCountries={setCountries} 
          fetchCountry={fetchCountry}
          /> */}
