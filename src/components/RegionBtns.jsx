@@ -3,7 +3,9 @@ import React, { useEffect } from 'react';
 
 function RegionBtns({ setCountries}) {
 
+    console.log("Region Buttons");
     const fetchCountry = () => {
+      console.log("Region Buttons Fetch");
         fetch(`https://restcountries.eu/rest/v2`)
           .then(response => response.json())
           .then(result => {
@@ -12,10 +14,10 @@ function RegionBtns({ setCountries}) {
           .catch((error) => console.log("error"))
         }
         
-      //   useEffect(() => {
-      //     fetchCountry();
-      //     // eslint-disable-next-line
-      // }, []);
+        useEffect(() => {
+          fetchCountry();
+          // eslint-disable-next-line
+      }, []);
 
     const fetchEurope = () => {
         fetch(`https://restcountries.eu/rest/v2/region/europe`)
@@ -25,10 +27,10 @@ function RegionBtns({ setCountries}) {
           })
         }
         
-      //   useEffect(() => {
-      //     fetchCountry();
-      //     // eslint-disable-next-line
-      // }, []);
+        useEffect(() => {
+          fetchCountry();
+          // eslint-disable-next-line
+      }, []);
     
       const fetchAfrica = () => {
         fetch(`https://restcountries.eu/rest/v2/region/africa`)
@@ -38,10 +40,10 @@ function RegionBtns({ setCountries}) {
           })
         }
         
-      //   useEffect(() => {
-      //     fetchCountry();
-      //     // eslint-disable-next-line
-      // }, []);
+        useEffect(() => {
+          fetchCountry();
+          // eslint-disable-next-line
+      }, []);
     
       const fetchAmericas = () => {
         fetch(`https://restcountries.eu/rest/v2/region/Americas`)
@@ -51,10 +53,10 @@ function RegionBtns({ setCountries}) {
           })
         }
         
-      //   useEffect(() => {
-      //     fetchCountry();
-      //     // eslint-disable-next-line
-      // }, []);
+        useEffect(() => {
+          fetchCountry();
+          // eslint-disable-next-line
+      }, []);
     
       const fetchAsia = () => {
         fetch(`https://restcountries.eu/rest/v2/region/Asia`)
@@ -64,10 +66,10 @@ function RegionBtns({ setCountries}) {
           })
         }
         
-      //   useEffect(() => {
-      //     fetchCountry();
-      //     // eslint-disable-next-line
-      // }, []);
+        useEffect(() => {
+          fetchCountry();
+          // eslint-disable-next-line
+      }, []);
 
 
     return (
