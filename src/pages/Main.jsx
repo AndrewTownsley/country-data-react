@@ -8,12 +8,12 @@ import { keepTheme } from '../components/themes';
 const Main = ({countries, setCountries, fetchCountry, fetchRegion, setFetchRegion}) => {
     return (
         <section  className="main">
-            <RegionBtns
+            {/* <RegionBtns
                 fetchRegion={fetchRegion}
                 setFetchRegion={setFetchRegion}
                 setCountries={setCountries} 
                 fetchCountry={fetchCountry}
-            /> 
+            />  */}
             <section className="app-container">
                 <DataBtns 
                     countries={countries} 

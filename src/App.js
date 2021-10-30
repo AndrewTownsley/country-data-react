@@ -8,6 +8,7 @@ import { keepTheme } from './components/themes';
 
 function App() {
   const [countries, setCountries] = useState([]);
+  const [country, setCountry] = useState('');
 
   const fetchCountry = () => {
     console.log("Hello Hello");
@@ -52,6 +53,8 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Main
+              country={country}
+              setCountry={setCountry}
               countries={countries}
               setCountries={setCountries}
               fetchCountry={fetchCountry}  
@@ -59,7 +62,9 @@ function App() {
           </Route> 
           <Route path="/detail/:name">
               <Detail
-                countries={countries}  
+                country={country}
+                countries={countries}
+                setCountry={setCountry}  
               />
           </Route> 
          </Switch> 
