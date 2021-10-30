@@ -1,68 +1,68 @@
 import React, { useEffect } from 'react';
 
 
-function RegionBtns({ setCountries, fetchRegion, setFetchRegion }) {
+function RegionBtns({ setCountries}) {
 
-
-  useEffect(() => {
     const fetchCountry = () => {
-        fetch(`https://restcountries.com/v2/${fetchRegion}`)
+        fetch(`https://restcountries.eu/rest/v2`)
           .then(response => response.json())
           .then(result => {
             setCountries(result)
           })
-          .catch((error) => console.log(error))
+          .catch((error) => console.log("error"))
         }
         
-          fetchCountry();
-          // eslint-disable-next-line
-      }, []);
+      //   useEffect(() => {
+      //     fetchCountry();
+      //     // eslint-disable-next-line
+      // }, []);
 
-
-    // const fetchEurope = () => {
-    //     fetch(`https://restcountries.com/v2/continent/europe`)
-    //       .then(response => response.json())
-    //       .then(result => {
-    //         setCountries(result)
-    //         console.log(result);
-    //       })
-    //       .catch((error) => console.log(error))
-    //     }
+    const fetchEurope = () => {
+        fetch(`https://restcountries.eu/rest/v2/region/europe`)
+          .then(response => response.json())
+          .then(result => {
+            setCountries(result)
+          })
+        }
         
       //   useEffect(() => {
       //     fetchCountry();
       //     // eslint-disable-next-line
       // }, []);
     
-   
+      const fetchAfrica = () => {
+        fetch(`https://restcountries.eu/rest/v2/region/africa`)
+          .then(response => response.json())
+          .then(result => {
+            setCountries(result)
+          })
+        }
         
       //   useEffect(() => {
       //     fetchCountry();
       //     // eslint-disable-next-line
       // }, []);
     
-      // const fetchAmericas = () => {
-      //   fetch(`https://restcountries.com/v2/continent/americas`)
-      //     .then(response => response.json())
-      //     .then(result => {
-      //       setCountries(result)
-      //     })
-      //     .catch((error) => console.log(error))
-      //   }
+      const fetchAmericas = () => {
+        fetch(`https://restcountries.eu/rest/v2/region/Americas`)
+          .then(response => response.json())
+          .then(result => {
+            setCountries(result)
+          })
+        }
         
       //   useEffect(() => {
       //     fetchCountry();
       //     // eslint-disable-next-line
       // }, []);
     
-      // const fetchAsia = () => {
-      //   fetch(`https://restcountries.com/v2/continent/asia  `)
-      //     .then(response => response.json())
-      //     .then(result => {
-      //       setCountries(result)
-      //     })
-      //     .catch((error) => console.log(error))
-      //   }
+      const fetchAsia = () => {
+        fetch(`https://restcountries.eu/rest/v2/region/Asia`)
+          .then(response => response.json())
+          .then(result => {
+            setCountries(result)
+          })
+        }
         
       //   useEffect(() => {
       //     fetchCountry();
@@ -72,10 +72,10 @@ function RegionBtns({ setCountries, fetchRegion, setFetchRegion }) {
 
     return (
         <div className="region-btn-container">
-            <button onClick={() => setFetchRegion('europe')} className="region-btn">Europe</button>
-            <button onClick={() => setFetchRegion('africa')} className="region-btn">Africa</button>
-            <button onClick={() => setFetchRegion('americas')} className="region-btn">Americas</button>
-            <button onClick={() => setFetchRegion('asia')} className="region-btn">Asia</button>
+            <button onClick={fetchEurope} className="region-btn">Europe</button>
+            <button onClick={fetchAfrica} className="region-btn">Africa</button>
+            <button onClick={fetchAmericas} className="region-btn">Americas</button>
+            <button onClick={fetchAsia} className="region-btn">Asia</button>
         </div>
         )
 }

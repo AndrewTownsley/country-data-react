@@ -5,6 +5,7 @@ import CountryItem from './CountryItem';
 const DataListMain = ({countries, setCountries }) => {
 
     const fetchCountry = () => {
+      console.log('Data List Main Component');
         fetch(`https://restcountries.com/v2/all`)
           .then(response => response.json())
           .then(result => {
