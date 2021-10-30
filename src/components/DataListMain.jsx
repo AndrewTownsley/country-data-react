@@ -4,7 +4,8 @@ import ListHeader from './ListHeader';
 const DataListMain = ({countries, setCountries }) => {
 
     const fetchCountry = () => {
-        fetch(`https://restcountries.eu/rest/v2`)
+      console.log("Data List Main");
+        fetch(`https://restcountries.eu/rest/v2/all`)
           .then(response => response.json())
           .then(result => {
             setCountries(result)

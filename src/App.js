@@ -10,7 +10,8 @@ function App() {
   const [countries, setCountries] = useState([]);
 
   const fetchCountry = () => {
-    fetch(`https://restcountries.eu/rest/v2`)
+    console.log("App FetchCountry");
+    fetch(`https://restcountries.com/v2/all`)
       .then(response => response.json())
       .then(result => {
         setCountries(result)
@@ -18,13 +19,9 @@ function App() {
       })
       .catch((error) => console.log(error))
     }
-    fetchCountry();
     
     useEffect(() => {
-      fetchCountry();
-  }, []);
-
-  useEffect(() => {
+    fetchCountry();
     keepTheme();
   }, []);
 
@@ -34,10 +31,10 @@ function App() {
         <h1>CountryData.com</h1>
         <ToggleBtn fetchCountry={fetchCountry}/>
       </header>
-      <RegionBtns
+      {/* <RegionBtns
          setCountries={setCountries} 
          fetchCountry={fetchCountry}
-         />
+         /> */}
       <section className="app-container">
         <DataBtns 
           countries={countries} 

@@ -4,12 +4,13 @@ import React, { useEffect } from 'react';
 function RegionBtns({ setCountries}) {
 
     const fetchCountry = () => {
+      console.log("Region Button Fetch");
         fetch(`https://restcountries.eu/rest/v2`)
           .then(response => response.json())
           .then(result => {
             setCountries(result)
           })
-          .catch((error) => console.log("error"))
+          .catch((error) => console.log(error))
         }
         
         useEffect(() => {
