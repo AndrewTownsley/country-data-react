@@ -14,9 +14,11 @@ function App() {
       .then(response => response.json())
       .then(result => {
         setCountries(result)
+        console.log(result);
       })
-      .catch((error) => console.log("error"))
+      .catch((error) => console.log(error))
     }
+    fetchCountry();
     
     useEffect(() => {
       fetchCountry();
