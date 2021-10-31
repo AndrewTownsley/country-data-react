@@ -1,13 +1,12 @@
 import { Link, useParams } from 'react-router-dom';
 
 
-const CountryItem = ({ country, index }) => {
+const CountryItem = ({ country }) => {
     const { name } = useParams();
-
 
     return (
             <Link to={`/detail/${country.name}`}>
-                <li className="country-item" key={index}>
+                <li className="country-item" key={country.index}>
                     <span>{country.name}
                         <img src={country.flag} alt={country.flag} />
                     </span>

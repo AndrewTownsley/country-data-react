@@ -13,10 +13,10 @@ const DataListMain = ({countries, setCountries }) => {
           })
         }
         
-      //   useEffect(() => {
-      //     fetchCountry()
-      //     // eslint-disable-next-line
-      // }, []);
+        useEffect(() => {
+          fetchCountry()
+          // eslint-disable-next-line
+      }, []);
 
     return (
       

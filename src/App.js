@@ -11,7 +11,7 @@ function App() {
   const [country, setCountry] = useState('');
 
   const fetchCountry = () => {
-    console.log("Hello Hello");
+    console.log("App Fetch");
     fetch(`https://restcountries.com/v2/all`)
     .then(response => response.json())
     .then(result => {
