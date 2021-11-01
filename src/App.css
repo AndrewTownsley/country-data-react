@@ -9,10 +9,16 @@ tr {
   display: inline-block;
 }
 
+html {
+  --trans-fast: 0.2s ease;
+  --trans-slow: 0.4s ease;
+}
+
 .theme-light {
   --bg-primary: #d6ecf1;
   --bg-secondary: #fff;
   --font-main: #3f5166;
+  --font-second: #59728f;
   --font-btn: #fff;
   --accent: #63b2c3;
   --accent-border: rgb(245, 245, 245);
@@ -27,6 +33,7 @@ tr {
   --bg-primary: #242424;
   --bg-secondary: #292929;
   --font-main: #d6ecf1;
+  --font-second: #b2c6ca;
   --font-btn: #fff;
   --accent: #63b2c3;
   --accent-border: #3d3d3d;
@@ -95,12 +102,12 @@ a {
 
 #dark:hover {
   background-color: #63b2c3;
-  transition: ease 0.2s;
+  transition: var(--trans-fast);
 }
 
 #light:hover {
   background-color: #0f1318;
-  transition: ease 0.2s;
+  transition: var(--trans-fast);
   color: var(--btnclr-hover);
 }
 
@@ -128,7 +135,7 @@ a {
 
 .region-btn:hover {
   background-color: var(--btn-hover);
-  transition: ease 0.2s;
+  transition: var(--trans-fast);
 }
 
 .region-btn:focus {
@@ -156,7 +163,7 @@ a {
 
 .data-btn:hover {
   background-color: var(--btn-hover);
-  transition: ease 0.2s;
+  transition: var(--trans-fast);
 }
 
 .country-list-header tr {
@@ -210,4 +217,67 @@ a {
 
 .country-item:hover {
   background-color: var(--item-hover);
+}
+
+/* --------------------------------------Detail */
+
+.detail-main {
+  background-color: var(--bg-primary);
+  color: var(--font-main);
+  min-height: 100vh;
+}
+
+.detail-card {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+  margin: 4rem;
+}
+
+.detail-back-btn {
+  width: 25%;
+  margin-left: 2rem;
+}
+
+.back-btn {
+  transition: var(--trans-fast);
+}
+
+.back-btn:hover {
+  color: var(--accent);
+}
+
+.detail-back-btn i {
+  padding-right: 10px;
+}
+
+.detail-card img {
+  width: 450px;
+}
+
+.detail-card-stats-lists {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.detail-card-stats h1 {
+  width: 100%;
+  border-bottom: 2px solid var(--accent-border);
+  text-underline-offset: 6px;
+}
+
+.detail-card-stats ul li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+.detail-card-stats h5 {
+  font-size: 1rem;
+}
+
+.detail-card-stats .country-stats {
+  color: var(--font-second);
+  font-size: 0.8rem;
+  font-weight: 400;
 }

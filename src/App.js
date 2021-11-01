@@ -11,12 +11,10 @@ function App() {
   const [country, setCountry] = useState('');
 
   const fetchCountry = () => {
-    console.log("App Fetch");
     fetch(`https://restcountries.com/v2/all`)
     .then(response => response.json())
     .then(result => {
         setCountries(result)
-        console.log(result);
       })
       .catch((error) => console.log(error))
     }

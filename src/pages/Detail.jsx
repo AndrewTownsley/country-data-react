@@ -16,12 +16,9 @@ const Detail = ({ setCountry, countries }) => {
             `)
             const country = await response.json();
             setCountryDetail(country);
-            console.log(country);
         }
         fetchCountryData()
     }, [name])
-    console.log(countryDetail);
-    console.log(countryDetail.area);
 
 
     // useEffect(() => {
@@ -39,24 +36,30 @@ const Detail = ({ setCountry, countries }) => {
     
     return (
         <div className="detail-main">
-            <div className="btn-container">
-                <Link to='/'><i className="fas fa-arrow-left">Back</i></Link>
+            <div className="detail-back-btn">
+                <Link className="back-btn" to='/'><i className="fas fa-arrow-left"></i><span>Back</span></Link>
             </div>
                 {   countryDetail.map((country) => 
                       <article className="detail-card" key={country.numericCode}>
                             <img src={country.flag} alt={country.name} />
                             <div className="detail-card-stats">
-                            <h1>{country.name}</h1>
-                            <h2>{JSON.stringify(params)}</h2>
-                               <h5>Native Name: <span className="country-stats">{country.nativeName}</span></h5>
-                               <h5>Population: <span className="country-stats">{country.population}</span></h5>
-                               <h5>Region: <span className="country-stats">{country.region}</span></h5>
-                               <h5>Sub Region: <span className="country-stats">{country.subregion}</span></h5>
-                               <h5>Capital: <span className="country-stats">{country.capital}</span></h5>
-                               {/* <h5>Currencies: <span className="country-stats">{country.currencies[0].name}</span></h5>
-                               <h5>Languages: <span className="country-stats">{country.languages[0].name}</span></h5> */}
-                               <h5>Area: <span className="country-stats">{country.area}</span></h5>
+                                <h1>{country.name}</h1>
+                                <div className="detail-card-stats-lists">
+                                    <ul>
+                                        <li><h5>Native Name: <span className="country-stats">{country.nativeName}       </span></h5></li>
+                                        <li><h5>Population: <span className="country-stats">{country.population}</span></h5></li>
+                                        <li><h5>Region: <span className="country-stats">{country.region}</span></h5></li>
+                                        <li><h5>Sub Region: <span className="country-stats">{country.subregion}</span></h5></li>
+                                    </ul>
+                                    <ul>
+                                        <li><h5>Capital: <span className="country-stats">{country.capital}</span></h5></li>
+                                        <li><h5>Currencies: <span className="country-stats">{country.currencies[0].name}</span></h5></li>
+                                        <li><h5>Languages: <span className="country-stats">{country.languages[0].name}</span></h5></li>
+                                        <li><h5>Area: <span className="country-stats">{country.area}</span></h5></li>
+                                    </ul>
+                                </div>
                             </div>
+
                         </article>
                             )  
                         }
