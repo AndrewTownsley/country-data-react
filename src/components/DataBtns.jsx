@@ -35,7 +35,6 @@ function DataBtns({ countries, setCountries, fetchCountry}) {
     
       function resetCountryList() {
         fetchCountry();
-        console.log('Reset Countries');
       }
       
       return (
