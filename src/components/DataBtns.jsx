@@ -43,7 +43,7 @@ function DataBtns({ countries, setCountries, fetchCountry}) {
             <button onClick={sortPopulation} className="data-btn">Sort by Population</button>
             <button onClick={sortDensity} className="data-btn">Sort by Density</button>
             <button onClick={filterMillions} className="data-btn">20m Population</button>
-            <button onClick={filterEnglish} className="data-btn">Show English Speaking</button>
+            <button onClick={filterEnglish} className="data-btn">English Speaking</button>
             <button onClick={resetCountryList} className="data-btn">Reset</button>
         </div>
     )

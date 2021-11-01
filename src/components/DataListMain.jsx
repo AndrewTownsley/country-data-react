@@ -4,6 +4,7 @@ import CountryItem from './CountryItem';
 
 const DataListMain = ({countries, setCountries }) => {
 
+<<<<<<< HEAD
     const fetchCountry = () => {
       console.log('Data List Main Component');
         fetch(`https://restcountries.com/v2/all`)
@@ -12,11 +13,21 @@ const DataListMain = ({countries, setCountries }) => {
             setCountries(result)
           })
         }
+=======
+    // const fetchCountry = () => {
+    //   console.log("Data List Main");
+    //     fetch(`https://restcountries.com/v2/all`)
+    //       .then(response => response.json())
+    //       .then(result => {
+    //         setCountries(result)
+    //       })
+    //     }
+>>>>>>> master
         
-        useEffect(() => {
-          fetchCountry()
-          // eslint-disable-next-line
-      }, []);
+    //     useEffect(() => {
+    //       fetchCountry()
+    //       // eslint-disable-next-line
+    //   }, []);
 
     return (
       
