@@ -111,9 +111,10 @@ a {
   color: var(--btnclr-hover);
 }
 
-.loading {
+.loading,
+.error {
   display: flex;
-  align-items: center;
+  padding-top: 100px;
   justify-content: center;
   background-color: var(--bg-primary);
   color: var(--font-main);

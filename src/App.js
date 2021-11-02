@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ToggleBtn from './components/ToggleBtn'
 import Loading from './components/Loading';
+import Error from './components/Error';
 import Main from './pages/Main';
 import Detail from './pages/Detail';
 import { keepTheme } from './components/themes';
@@ -11,6 +12,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   // const fetchCountry = () => {
   //   fetch(`https://restcountries.com/v2/all`)
@@ -24,10 +26,16 @@ function App() {
   useEffect(() => {
     const fetchCountry = async () => {
       setIsLoading(true);
-      const response = await fetch(`https://restcountries.com/v2/all`);
+      setHasError(false);
+      try {
+        const response = await fetch(`https://restcountries.com/v2/all`);
         const results = await response.json();
         setCountries(results);
-        setIsLoading(false);
+      }
+      catch (error) {
+        setHasError(true);
+      }
+      setIsLoading(false);
     }
     fetchCountry()
   }, [setCountries])
@@ -48,6 +56,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <>
+            {hasError && <Error/>}
             {isLoading ? (<Loading/>) :
               <Main
               isLoading={isLoading}
@@ -60,11 +69,14 @@ function App() {
             </>
           </Route> 
           <Route path="/detail/:name">
-              <Detail
+            <>
+          { isLoading ? (<Loading/>) :
+             <Detail
                 country={country}
                 countries={countries}
                 setCountry={setCountry}  
-              />
+              />}
+              </>
           </Route> 
          </Switch> 
       </main>
