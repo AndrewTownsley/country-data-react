@@ -111,6 +111,16 @@ a {
   color: var(--btnclr-hover);
 }
 
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  color: var(--font-main);
+  min-height: 100vh;
+  text-align: center;
+}
+
 .app-container {
   display: grid;
   grid-template-columns: 25% 75%;
@@ -243,6 +253,7 @@ a {
 .detail-back-btn {
   width: 25%;
   margin-left: 2rem;
+  padding-top: 2rem;
 }
 
 .back-btn {

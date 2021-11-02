@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ListHeader from './ListHeader';
 import CountryItem from './CountryItem';
 
-const DataListMain = ({countries, setCountries }) => {
+const DataListMain = ({countries, setCountries, isLoading }) => {
 
     const fetchCountry = () => {
       console.log('Data List Main Component');
@@ -20,10 +20,11 @@ const DataListMain = ({countries, setCountries }) => {
 
     return (
       
-        <section className="country-list-container"> 
+      <section className="country-list-container"> 
                 <ListHeader/>
                 <section className="country-list">
-                    {countries.map((country, index) => {
+                    { isLoading ? (<p>Loading...</p>) :
+                    countries.map((country, index) => {
                       return <CountryItem
                       key={country.numericCode}
                       countries={countries}

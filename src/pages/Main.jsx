@@ -5,7 +5,7 @@ import { keepTheme } from '../components/themes';
 
 
 
-const Main = ({countries, setCountries, fetchCountry, fetchRegion, setFetchRegion}) => {
+const Main = ({countries, setCountries, fetchCountry, fetchRegion, setFetchRegion, isLoading}) => {
     return (
         <section  className="main">
             {/* <RegionBtns
@@ -21,6 +21,7 @@ const Main = ({countries, setCountries, fetchCountry, fetchRegion, setFetchRegio
                     fetchCountry={fetchCountry}
                 />
                 <DataListMain 
+                    isLoading={isLoading}
                     fetchRegion={fetchRegion}
                     setFetchRegion={setFetchRegion}
                     countries={countries} 
