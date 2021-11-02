@@ -50,10 +50,11 @@ const Detail = ({ setCountry, countries }) => {
                                         <li><h5>Population: <span className="country-stats">{country.population}</span></h5></li>
                                         <li><h5>Region: <span className="country-stats">{country.region}</span></h5></li>
                                         <li><h5>Sub Region: <span className="country-stats">{country.subregion}</span></h5></li>
+                                        <a className="detail-card-wiki-link" href={`https://en.wikipedia.org/wiki/${country.name}`}>{`https://en.wikipedia.org/wiki/${country.name}`}</a>
                                     </ul>
                                     <ul>
-                                        <li><h5>Capital: <span className="country-stats">{country.capital}</span></h5></li>
-                                        <li><h5>Currencies: <span className="country-stats">{country.currencies[0].name}</span></h5></li>
+                                        <li><h5>Capital: <span className="country-stats">{country.capital ? country.capital : "N/A"}</span></h5></li>
+                                        <li><h5>Currencies: <span className="country-stats">{country.currencies ? country.currencies[0].name : "N/A"}</span></h5></li>
                                         <li><h5>Languages: <span className="country-stats">{country.languages[0].name}</span></h5></li>
                                         <li><h5>Area: <span className="country-stats">{country.area}</span></h5></li>
                                     </ul>

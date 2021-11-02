@@ -299,3 +299,11 @@ a {
   font-size: 0.8rem;
   font-weight: 400;
 }
+
+.detail-card-wiki-link {
+  text-decoration: underline;
+}
+
+.detail-card-wiki-link:hover {
+  color: var(--accent);
+}
