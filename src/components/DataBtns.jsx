@@ -1,5 +1,15 @@
 
-function DataBtns({ countries, setCountries, fetchCountry}) {
+function DataBtns({ countries, setCountries }) {
+
+  const fetchCountry = () => {
+    fetch(`https://restcountries.com/v2/all`)
+    .then(response => response.json())
+    .then(result => {
+        setCountries(result)
+      })
+      .catch((error) => console.log(error))
+    }
+
     function sortPopulation() {
         let temp = [...countries]
          temp.sort((a, b) => {

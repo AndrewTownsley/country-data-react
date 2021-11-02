@@ -10,18 +10,27 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('');
 
-  const fetchCountry = () => {
-    fetch(`https://restcountries.com/v2/all`)
-    .then(response => response.json())
-    .then(result => {
-        setCountries(result)
-      })
-      .catch((error) => console.log(error))
+  // const fetchCountry = () => {
+  //   fetch(`https://restcountries.com/v2/all`)
+  //   .then(response => response.json())
+  //   .then(result => {
+  //       setCountries(result)
+  //     })
+  //     .catch((error) => console.log(error))
+  //   }
+
+  useEffect(() => {
+    const fetchCountry = async () => {
+      const response = await fetch(`https://restcountries.com/v2/all`);
+        const results = await response.json();
+        setCountries(results);
     }
+    fetchCountry()
+  }, [setCountries])
 
     
     useEffect(() => {
-    fetchCountry();
+    // fetchCountry();
     keepTheme();
   }, []);
 
@@ -39,7 +48,7 @@ function App() {
               setCountry={setCountry}
               countries={countries}
               setCountries={setCountries}
-              fetchCountry={fetchCountry}  
+              // fetchCountry={fetchCountry}  
             />
           </Route> 
           <Route path="/detail/:name">

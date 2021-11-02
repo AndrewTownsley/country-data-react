@@ -10,7 +10,7 @@ const CountryItem = ({ country }) => {
                     <span>{country.name}
                         <img src={country.flag} alt={country.flag} />
                     </span>
-                    <span> {country.population.toLocaleString('en-US')}</span>
+                    <span className="country-item-pop"> {country.population.toLocaleString('en-US')}</span>
                     <span className="density"> {country.area == null ? "N/A" :
                     (country.population / country.area).toFixed(0)} people/sq km</span>
                 </li>
