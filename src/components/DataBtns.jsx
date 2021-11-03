@@ -48,13 +48,16 @@ function DataBtns({ countries, setCountries }) {
       }
       
       return (
+        <>
+              <button className="mobile-menu-open btn">Filters <i className="fas fa-arrow-right"></i></button>
           <div className="btn-container">
-            <button onClick={sortPopulation} className="data-btn">Sort by Population</button>
-            <button onClick={sortDensity} className="data-btn">Sort by Density</button>
-            <button onClick={filterMillions} className="data-btn">20m Population</button>
-            <button onClick={filterEnglish} className="data-btn">English Speaking</button>
-            <button onClick={resetCountryList} className="data-btn">Reset</button>
+            <button onClick={sortPopulation} className="data-btn btn">Sort by Population</button>
+            <button onClick={sortDensity} className="data-btn btn">Sort by Density</button>
+            <button onClick={filterMillions} className="data-btn btn">20m Population</button>
+            <button onClick={filterEnglish} className="data-btn btn">English Speaking</button>
+            <button onClick={resetCountryList} className="data-btn btn">Reset</button>
         </div>
+        </>
     )
 }
 export default DataBtns;
