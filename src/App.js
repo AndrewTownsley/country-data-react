@@ -51,7 +51,10 @@ function App() {
     <Router>
       <main>
         <header className="header">
+          <div className="header-container">
           <h1>CountryData</h1>
+          <button className="mobile-menu-open">Filters <i className="fas fa-arrow-right"></i></button>
+          </div>
           <ToggleBtn/>
         </header>
         <Switch>

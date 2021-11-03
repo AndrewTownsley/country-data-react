@@ -131,6 +131,21 @@ a {
   color: var(--btnclr-hover);
 }
 
+.mobile-menu-open {
+  background-color: var(--bg-primary);
+  color: var(--font-main);
+  cursor: pointer;
+  outline: none;
+  border: 3px solid var(--accent);
+  border-radius: 5px;
+  padding: 5px;
+  /* padding-top: 1rem; */
+}
+
+.mobile-menu-open:hover {
+  color: var(--accent);
+}
+
 /* -------------------------------------------Region Btns */
 
 .region-btn-container {
@@ -212,6 +227,17 @@ a {
   }
 }
 @media (max-width: 825px) {
+  .app-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-container {
+    position: absolute;
+    left: 0;
+    /* transition: transform 0.3s ease-out; */
+    transform: translateX(-100%);
+  }
 }
 
 /* ----------------------------------------------Data List  */
@@ -290,6 +316,17 @@ a {
 }
 
 @media (max-width: 825px) {
+  .country-list-container {
+    min-width: 300px;
+    margin: 0 1rem;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 615px) {
+  .header h1 {
+    display: none;
+  }
 }
 /* --------------------------------------Detail */
 
