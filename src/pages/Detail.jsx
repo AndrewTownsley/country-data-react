@@ -41,7 +41,10 @@ const Detail = ({ setCountry, countries }) => {
             </div>
                 {   countryDetail.map((country) => 
                       <article className="detail-card" key={country.numericCode}>
+                          <div className="detail-card-img-container">
                             <img src={country.flag} alt={country.name} />
+                            <a className="detail-card-wiki-link" href={`https://en.wikipedia.org/wiki/${country.name}`}>{`https://en.wikipedia.org/wiki/${country.name}`}</a>
+                          </div>
                             <div className="detail-card-stats">
                                 <h1>{country.name}</h1>
                                 <div className="detail-card-stats-lists">
@@ -50,7 +53,7 @@ const Detail = ({ setCountry, countries }) => {
                                         <li><h5>Population: <span className="country-stats">{country.population}</span></h5></li>
                                         <li><h5>Region: <span className="country-stats">{country.region}</span></h5></li>
                                         <li><h5>Sub Region: <span className="country-stats">{country.subregion}</span></h5></li>
-                                        <a className="detail-card-wiki-link" href={`https://en.wikipedia.org/wiki/${country.name}`}>{`https://en.wikipedia.org/wiki/${country.name}`}</a>
+                                   
                                     </ul>
                                     <ul>
                                         <li><h5>Capital: <span className="country-stats">{country.capital ? country.capital : "N/A"}</span></h5></li>

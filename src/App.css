@@ -59,32 +59,52 @@ a {
   align-items: center;
 }
 
+.loading,
+.error {
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  color: var(--font-main);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+/* ---------------------------------------------Header */
+
 .header {
   background-color: var(--bg-primary);
   color: var(--font-main);
   border-top: 6px solid var(--accent);
   height: 3rem;
-  /* position: fixed; */
+  padding: 1rem 2rem;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
 }
 
 .header h1 {
-  margin: 0 2rem;
+  /* margin: 0 2rem; */
   font-size: 1.6rem;
 }
 
 .dark-toggle {
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
   display: flex;
   align-items: flex-end;
 }
 
 .toggle-btn {
-  margin: 0 0 0 1rem;
+  /* margin: 0 0 0 1rem; */
   border: none;
   padding: 10px;
   border-radius: 50px;
@@ -111,23 +131,7 @@ a {
   color: var(--btnclr-hover);
 }
 
-.loading,
-.error {
-  display: flex;
-  padding-top: 100px;
-  justify-content: center;
-  background-color: var(--bg-primary);
-  color: var(--font-main);
-  min-height: 100vh;
-  text-align: center;
-}
-
-.app-container {
-  display: grid;
-  grid-template-columns: 25% 75%;
-  gap: 2rem;
-  margin: 2rem;
-}
+/* -------------------------------------------Region Btns */
 
 .region-btn-container {
   display: flex;
@@ -154,6 +158,8 @@ a {
   outline: 3px solid #63b2c3;
 }
 
+/* -----------------------------------------------Data Btns  */
+
 .btn-container {
   display: flex;
   flex-direction: column;
@@ -177,6 +183,38 @@ a {
   background-color: var(--btn-hover);
   transition: var(--trans-fast);
 }
+
+@media (max-width: 1080px) {
+  .app-container {
+    margin: 2rem 0 2rem 0;
+    gap: 0;
+  }
+
+  .header {
+    padding: 1rem;
+    height: auto;
+  }
+  .header h1 {
+    font-size: 1.4rem;
+  }
+  .toggle-btn {
+    font-size: 0.7rem;
+  }
+
+  .btn-container {
+    margin: 0;
+  }
+
+  .data-btn {
+    font-size: 0.8rem;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 825px) {
+}
+
+/* ----------------------------------------------Data List  */
 
 .country-list-header tr {
   display: flex;
@@ -236,6 +274,23 @@ a {
   background-color: var(--item-hover);
 }
 
+@media (max-width: 1080px) {
+  .country-list-container {
+    border-top-left-radius: 0;
+    min-width: 500px;
+  }
+
+  .country-list-header h2 {
+    font-size: 1rem;
+  }
+
+  .country-item {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 825px) {
+}
 /* --------------------------------------Detail */
 
 .detail-main {
@@ -247,7 +302,7 @@ a {
 .detail-card {
   display: flex;
   gap: 2rem;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 4rem;
 }
 
@@ -302,8 +357,86 @@ a {
 
 .detail-card-wiki-link {
   text-decoration: underline;
+  font-size: 0.75rem;
+  padding-top: 0.75rem;
 }
 
 .detail-card-wiki-link:hover {
   color: var(--accent);
+}
+
+@media (max-width: 1050px) {
+  .detail-main {
+    min-height: 100%;
+  }
+
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-around;
+    margin: 3rem 3rem 0 3rem;
+  }
+
+  .detail-card-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-card-stats {
+    height: 100%;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1rem;
+  }
+
+  .header {
+    padding: 0.5rem;
+  }
+  .header h1 {
+    font-size: 1rem;
+    margin: 0rem;
+  }
+
+  .toggle-btn {
+    font-size: 0.7rem;
+    margin: 0rem;
+  }
+
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* width: 100vw; */
+    justify-content: space-around;
+    margin: 1.5rem 1.5rem 0 1.5rem;
+  }
+
+  .detail-card h5 {
+    font-size: 0.8rem;
+  }
+
+  .detail-card .country-stats {
+    font-size: 0.75rem;
+  }
+
+  .detail-card img {
+    width: 250px;
+  }
+
+  .detail-card-wiki-link {
+    font-size: 0.7rem;
+    padding-top: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .detail-card {
+    margin: 1rem 1rem 0 1rem;
+  }
 }

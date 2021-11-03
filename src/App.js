@@ -51,7 +51,7 @@ function App() {
     <Router>
       <main>
         <header className="header">
-          <h1>CountryData.com</h1>
+          <h1>CountryData</h1>
           <ToggleBtn/>
         </header>
         <Switch>
