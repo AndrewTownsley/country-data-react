@@ -5,7 +5,7 @@ import { keepTheme } from '../components/themes';
 
 
 
-const Main = ({countries, setCountries, fetchCountry, fetchRegion, setFetchRegion, isLoading}) => {
+const Main = ({ open, setOpen, countries, setCountries, fetchCountry, fetchRegion, setFetchRegion, isLoading}) => {
     return (
         <section  className="main">
             {/* <RegionBtns
@@ -16,6 +16,8 @@ const Main = ({countries, setCountries, fetchCountry, fetchRegion, setFetchRegio
             />  */}
             <section className="app-container">
                 <DataBtns 
+                    open={open}
+                    setOpen={setOpen}
                     countries={countries} 
                     setCountries={setCountries} 
                     fetchCountry={fetchCountry}

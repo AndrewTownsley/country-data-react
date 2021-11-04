@@ -13,15 +13,7 @@ function App() {
   const [country, setCountry] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
-
-  // const fetchCountry = () => {
-  //   fetch(`https://restcountries.com/v2/all`)
-  //   .then(response => response.json())
-  //   .then(result => {
-  //       setCountries(result)
-  //     })
-  //     .catch((error) => console.log(error))
-  //   }
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const fetchCountry = async () => {
@@ -65,7 +57,8 @@ function App() {
               setCountry={setCountry}
               countries={countries}
               setCountries={setCountries}
-              // fetchCountry={fetchCountry}  
+              open={open}
+              setOpen={setOpen}  
             />}
             </>
           </Route> 

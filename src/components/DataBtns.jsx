@@ -1,5 +1,5 @@
 
-function DataBtns({ countries, setCountries }) {
+function DataBtns({ open, setOpen, countries, setCountries }) {
 
   const fetchCountry = () => {
     fetch(`https://restcountries.com/v2/all`)
@@ -49,8 +49,15 @@ function DataBtns({ countries, setCountries }) {
       
       return (
         <>
-              <button className="mobile-menu-open btn">Filters <i className="fas fa-arrow-right"></i></button>
-          <div className="btn-container">
+            <button 
+              onClick={ !open ? () => setOpen(true) : () => setOpen(false)} 
+              className={open ? "mobile-menu-open active btn" : "mobile-menu-open btn"}
+              open={open}
+            >
+              Filters 
+            <i className="fas fa-arrow-right"></i>
+            </button>
+          <div className={open ? "btn-container active" : "btn-container"} open={open}>
             <button onClick={sortPopulation} className="data-btn btn">Sort by Population</button>
             <button onClick={sortDensity} className="data-btn btn">Sort by Density</button>
             <button onClick={filterMillions} className="data-btn btn">20m Population</button>
