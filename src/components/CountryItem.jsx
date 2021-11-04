@@ -1,8 +1,8 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const CountryItem = ({ country }) => {
-    const { name } = useParams();
+    // const { name } = useParams();
 
     return (
             <Link to={`/detail/${country.name}`}>

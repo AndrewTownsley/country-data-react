@@ -6,7 +6,7 @@ import { keepTheme } from '../components/themes';
 const Detail = ({ setCountry, countries }) => {
     const [ countryDetail, setCountryDetail] = useState([]);
     const { name } = useParams()
-    const params = useParams()
+    // const params = useParams()
 
 
     useEffect(() => {
@@ -20,15 +20,6 @@ const Detail = ({ setCountry, countries }) => {
         fetchCountryData()
     }, [name])
 
-
-    // useEffect(() => {
-    //     const fetchCountryData = () => {
-    //         fetch(`https://restcountries.eu/rest/v2/name/${name}?fullText=true`)
-    //         .then(response => response.json())
-    //         .then(result => setCountryDetail(result))
-    //     }
-    //     fetchCountryData();
-    // },[name])
 
     useEffect(() => {
         keepTheme()

@@ -46,7 +46,7 @@ function DataBtns({ open, setOpen, countries, setCountries }) {
       function resetCountryList() {
         fetchCountry();
       }
-      
+
       return (
         <>
             <button 
@@ -55,7 +55,6 @@ function DataBtns({ open, setOpen, countries, setCountries }) {
               open={open}
             >
               Filters 
-            <i className="fas fa-arrow-right"></i>
             </button>
           <div className={open ? "btn-container active" : "btn-container"} open={open}>
             <button onClick={sortPopulation} className="data-btn btn">Sort by Population</button>

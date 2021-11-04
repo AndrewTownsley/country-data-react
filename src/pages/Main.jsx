@@ -1,19 +1,10 @@
 import DataListMain from "../components/DataListMain"
 import DataBtns from "../components/DataBtns";
-import RegionBtns from "../components/RegionBtns";
-import { keepTheme } from '../components/themes';
 
 
-
-const Main = ({ open, setOpen, countries, setCountries, fetchCountry, fetchRegion, setFetchRegion, isLoading}) => {
+const Main = ({ open, setOpen, countries, setCountries, fetchCountry, isLoading}) => {
     return (
         <section  className="main">
-            {/* <RegionBtns
-                fetchRegion={fetchRegion}
-                setFetchRegion={setFetchRegion}
-                setCountries={setCountries} 
-                fetchCountry={fetchCountry}
-            />  */}
             <section className="app-container">
                 <DataBtns 
                     open={open}
@@ -24,8 +15,6 @@ const Main = ({ open, setOpen, countries, setCountries, fetchCountry, fetchRegio
                 />
                 <DataListMain 
                     isLoading={isLoading}
-                    fetchRegion={fetchRegion}
-                    setFetchRegion={setFetchRegion}
                     countries={countries} 
                     setCountries={setCountries}
                 />

@@ -36,6 +36,7 @@ html {
   --accent: #63b2c3;
   --accent-border: rgb(245, 245, 245);
   --bg-btn: #3f5166;
+  --bg-btn-mobile: #3f5166;
   --btn-hover: #4f6885;
   --bg-item: #f7fdff;
   --item-hover: #d6ecf1;
@@ -51,6 +52,7 @@ html {
   --accent: #63b2c3;
   --accent-border: #3d3d3d;
   --bg-btn: rgba(167, 193, 199, 0.2);
+  --bg-btn-mobile: rgb(77, 87, 90);
   --btn-hover: rgba(119, 138, 143, 0.6);
   --item-hover: #3d3d3d;
 }
@@ -245,7 +247,8 @@ a {
     justify-content: center;
     border-radius: 25px;
     padding: var(--padd-med);
-    margin-left: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
     width: 120px;
     border: 2px solid var(--accent);
     transition: var(--trans-fast);
@@ -260,12 +263,19 @@ a {
   }
 
   .btn-container {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-btn-mobile);
     position: absolute;
     left: 0;
     top: 25%;
+    padding: 1rem 1rem 1rem 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     transition: var(--trans-slow);
     transform: translateX(-100%);
+  }
+
+  .data-btn {
+    background-color: var(--bg-btn-mobile);
   }
 }
 .btn-container.active {
