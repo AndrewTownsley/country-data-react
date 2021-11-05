@@ -7,7 +7,9 @@ const CountryItem = ({ country }) => {
     const breakPoint = 620;
 
     useEffect(() => {
-        window.addEventListener('resize', () => setWidth(window.innerWidth));
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener('resize', handleWindowResize);
+        return () => window.removeEventListener('resize', handleWindowResize)
     }, [])
 
     return (
@@ -28,7 +30,7 @@ const CountryItem = ({ country }) => {
                 <li className="country-item" key={country.index}>
                     <div>
                             <img src={country.flag} alt={country.flag} />
-                        <span className="country-item-img-name">{country.name}
+                        <span className="country-item-img-name"><h4>{country.name}</h4>
                         </span>
                     </div>
                     <div className="country-item-stats-mobile">
