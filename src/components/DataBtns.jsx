@@ -55,6 +55,13 @@ function DataBtns({ open, setOpen, countries, setCountries }) {
               open={open}
             >
               Filters 
+              <div className="mobile-menu-open-icon">
+              { open ? 
+                (<i className="fas fa-chevron-left"></i>)
+                :
+                (<i className="fas fa-chevron-right"></i>)
+              }
+              </div>
             </button>
           <div className={open ? "btn-container active" : "btn-container"} open={open}>
             <button onClick={sortPopulation} className="data-btn btn">Sort by Population</button>
