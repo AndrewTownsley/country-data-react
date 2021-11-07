@@ -40,7 +40,7 @@ function App() {
 
   return (
     <Router>
-      <main>
+      <main onClick={ open ? () => setOpen(false) : null}>
         <header className="header">
           <h1>CountryData</h1>
               <ToggleBtn/>
