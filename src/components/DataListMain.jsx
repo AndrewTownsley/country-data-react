@@ -3,19 +3,6 @@ import CountryItem from './CountryItem';
 
 const DataListMain = ({countries, setCountries, isLoading }) => {
 
-    // const fetchCountry = () => {
-    //   console.log('Data List Main Component');
-    //     fetch(`https://restcountries.com/v2/all`)
-    //       .then(response => response.json())
-    //       .then(result => {
-    //         setCountries(result)
-    //       })
-    //     }
-          //     useEffect(() => {
-    //       fetchCountry()
-    //       // eslint-disable-next-line
-    //   }, []);
-
     return (
       
       <section className="country-list-container"> 
