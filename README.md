@@ -1,32 +1,19 @@
-<!-- 1.  Fetch data from an API that returns Country data -->
+# Country Data App
 
-<!-- 2.  Display a list of Countries with Name, population and density -->
+## Installation
 
-<!-- 3.  Create Button that sorts country by population. -->
+1.  Clone the repository, and open it in your Code Editor.
+2.  Run NPM install in the command line of the project.
+3.  Run NPM Start in the command line of the project.
 
-<!-- 4.  Create Button that only displays countries with 20 million plus in population. -->
+## Usage
 
-<!-- 5.  Create button that Shows only English speaking countries. -->
+1.  Use the buttons on the left side of the screen to filter and sort the Countries.
+2.  Click on a Country to see more detailed information about the country.
+3.  Use the dark mode toggle to select light or dark mode.
 
-<!-- 6.  Display countries by Region ( Africa, Americas, Asia, Europe, Oceania ). -->
+## Description
 
-7.  Route to new page with more detailed country info .
-    <!-- a. Create Country Page Component. -->
-    <!-- b. Implement Route/Switch to navigate to the country component. -->
-
-    c. Back Button to return to Home Page****\*\*****
-
-8.  Add Search == search by Country.
-
-9.  Back Button on the Individual Country Page.
-
-10. Deal with error handling.
-
-11. refactor fetch to async await.s
-
-**_ CSS _**
-**_ CSS _**
-**_ CSS _**
-
-1.  Responsive -- Mobile
-2.  Grid Layout ??
+1.  This app fetches data from the REST Countries API, and displays select data about each country listed.
+2.  The countries are able to be sorted by population and population density, and they can be filtered to include only English speaking countries, or countries with greater than 20 Million in population.
+3.  Clicking on a Country in the list routes to a detail page for the selected Country. This page provides more detailed information on the country, as well as displaying an image of the Country's flag.
